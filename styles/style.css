@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');*/
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+/*
+Paars #5722CD
+Blauw #4845E4
+Roze #ED4385
+Zwart #0C0C0C (voor standaard tekst)
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services")
+
+Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst)
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+h1,
+h2,
+h3,
+h5 {
+    font-family: Merriweather, sans-serif;
+}
+
+p,
+a,
+h4,
+li {
+    font-family: Roboto, sans-serif;
+}
+
+header h1,
+header p {
+    color: white;
+}
+
+
+header h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+header p {
+    font-size: 35px;
+    font-weight: normal;
+    padding: 30px;
+}
+
+header button {
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Nav ------------------------- */
+
+nav {
+    background-color: #4845E4;
+    padding: 40px;
+    font-size: 30px;
+    /*border: #000 dashed 2px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 600px;
+    /*border: darkblue dashed 2px;*/
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    /*border: red dashed 2px;*/
+    transition: color 0.5s;
+}
+
+nav a:hover {
+    color: #ED4385;
+}
+
+
+/* --------------- 4.2 Header ------------------------- */
+
+header {
+    background-color: #4845E4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 80px 20px 0 20px;
+    /*border: red dashed 2px;*/
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 1200px;
+    /*border: yellow dashed 2px;*/
+}
+
+header img {
+    width: 100px;
+    padding-top: 80px;
+}
+
+header button {
+    background-color: #ED4385;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 25px 50px;
+    border-radius: 100px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #F2F0FF;
+    color: #ED4385;
+    cursor: pointer;
+}
+
+header button:active {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: hsla(248, 100%, 97%, 0.8);
+}
+
+/* --------------- 4.3 Introduction ------------------- */
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 80px auto;
+    /*border: red 2px dotted;*/
+}
+
+.introduction h2 {
+    margin: 20px;
+    text-align: center;
+    font-size: 40px;
+    color: #4845E4;
+}
+
+.introduction p {
+    color: black;
+    padding: 70px 0;
+    font-size: 25px;
+}
+
+.introduction a {
+    text-decoration: none;
+    transition: color 0.5s;
+
+}
+
+.introduction a:hover {
+    color: #4845E4;
+
+}
+
+/* --------------- 4.4 Projects ------------------- */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*border: red 2px dotted;*/
+    background-color: #F3F6F9;
+    /*margin: 0 20px;*/
+}
+
+.single-project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 80px 40px;
+    /*border: blue 2px dotted;*/
+    /*margin: 80px 0;*/
+    flex-wrap: wrap;
+}
+
+.single-project div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-basis: 600px;
+    margin: 120px 0;
+}
+
+.project-reverse {
+    flex-direction: row-reverse;
+}
+
+.single-project span img {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.single-project div img {
+    width: 80px;
+}
+
+.single-project div h2 {
+    font-size: 40px;
+}
+
+.single-project div p {
+    font-size: 25px;
+}
+
+.single-project div a {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.single-project div a:hover {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ED4385;
+}
+
+.img-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.projects-img {
+    width: 100%;
+}
+
+/* --------------- 4.5 USP ------------------- */
+
+.center-usp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.usp-section {
+    /*border: black 2px dotted;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1600px;
+    margin: 80px 0;
+    /*align-content: center;*/
+}
+
+.usp-div {
+    border: #4845E4 1px solid;
+    height: 350px;
+    width: 400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.usp-div img {
+    width: 80px;
+}
+
+.usp-div h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #4845E4;
+}
+
+.usp-div p {
+    color: #7A7A7A;
+}
+
+/* --------------- 4.6 Contact ------------------- */
+
+.form-section {
+    background-color: #4845E4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*margin: 20px 0;*/
+    /*border: red 2px dotted;*/
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*max-width: 1600px;*/
+    /*border: green 2px dotted;*/
+    width: 60vw;
+    margin: 150px 0 80px 0;
+}
+
+.form-div h1 {
+    font-size: 60px;
+    text-align: center;
+    color: white;
+
+}
+
+.form-div p {
+    font-size: 25px;
+    font-weight: normal;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    /*width: 1600px;*/
+}
+
+.form-div form {
+    /*border: red 2px dotted;*/
+    /*width: 100%;*/
+    /*flex-shrink: 1;*/
+    /*flex-grow: 0;*/
+    padding: 20px 0;
+    width: 100%;
+}
+
+.form-div form input {
+    width: 100%;
+    padding: 20px;
+    font-family: Roboto, sans-serif;
+    border-radius: 5px;
+    border: none;
+}
+
+.form-div form label {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.form-div form textarea {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.form-div form input {
+    font-weight: normal;
+}
+
+.form-div button {
+    background-color: #ED4385;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 25px 70px;
+    border-radius: 100px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.form-div button:hover {
+    background-color: #F2F0FF;
+    color: #ED4385;
+    cursor: pointer;
+}
+
+.form-div button:active {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: hsla(248, 100%, 97%, 0.8);
+}
+
+.space {
+    margin-top: 40px;
+}
+
+/* --------------- 4.7 Footer ------------------- */
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px 0;
+    font-size: 18px;
+}
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        font-size: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
+
+    .introduction h2 {
+        font-size: 2rem;
+    }
+
+    .single-project {
+        flex-wrap: wrap-reverse;
+        margin: 0 20px 20px 20px;
+    }
+
+    .single-project div {
+        margin: 40px 0;
+        height: 30vh;
+        justify-content: space-evenly;
+    }
+
+    .form-div form {
+        width: 80vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
